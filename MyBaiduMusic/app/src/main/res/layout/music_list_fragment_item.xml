@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="7dp"
+        android:layout_weight="0.7">
+
+        <ImageView
+            android:id="@+id/music_list_fragment_internet_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="bottom|right"
+            android:scaleType="fitXY"
+
+            />
+    </FrameLayout>
+    <!--榜单前三名-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+         <!--标题-->
+        <TextView
+            android:id="@+id/music_list_fragment_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX榜"
+            android:textColor="#131313"/>
+        <!--第一名-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="1"
+                android:textColor="#e91010"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/music_list_fragment_first_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="第一名"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/music_list_fragment_first_author_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="哈哈"
+                android:textSize="10sp"/>
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/music_list_fragment_first_author_tv"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="哈哈"-->
+            <!--android:ellipsize="marquee"/>-->
+        </LinearLayout>
+        <!--第二名-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="2"
+                android:textColor="#f2651e"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/music_list_fragment_two_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="第二名"
+                android:textSize="10sp"/>
+
+
+            <TextView
+                android:id="@+id/music_list_fragment_two_author_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="哈哈"
+                android:textSize="10sp"/>
+        </LinearLayout>
+        <!--第三名-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="3"
+                android:textColor="#a77a07"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/music_list_fragment_three_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="第三名"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/music_list_fragment_three_author_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="哈哈"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--更多-->
+    <ImageView
+        android:id="@+id/music_list_fragment_next_iv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0.2"
+        />
+
+
+</LinearLayout>

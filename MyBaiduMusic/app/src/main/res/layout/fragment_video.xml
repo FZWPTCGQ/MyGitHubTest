@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+                android:layout_marginTop="@dimen/ten"
+              tools:context="com.aqiang.dllo.mybaidumusic.fragment.sonfragment.VideoFragment">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/video_fragment_rv"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:id="@+id/video_fragment_ll"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="@dimen/fifteen"
+            android:background="#1cb6ed"
+            android:layout_marginLeft="@dimen/ten"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="全部"/>
+
+        <ImageView
+            android:id="@+id/video_fragment_pull_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bt_mv_pull_down_normal"/>
+        <LinearLayout
+            android:layout_width="@dimen/twoHundred"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/video_fragment_zuire_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fifteen"
+            android:text="最热"
+            />
+        <TextView
+            android:id="@+id/video_fragment_zuixin_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最新"
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

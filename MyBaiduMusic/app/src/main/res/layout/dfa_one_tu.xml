@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <!--第一行-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dynamic_fragment_adapter_three_detail_item_usepic"
+            android:layout_width="@dimen/forty"
+            android:layout_height="@dimen/forty"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/dynamic_fragment_adapter_three_detail_item_usepic"
+            android:layout_toRightOf="@id/dynamic_fragment_adapter_three_detail_item_usepic"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dynamic_fragment_adapter_three_detail_item_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你是个好姑娘"
+                />
+
+
+            <TextView
+                android:id="@+id/dynamic_fragment_adapter_three_detail_item_ctime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/dynamic_fragment_adapter_three_detail_item_username"
+                android:layout_below="@id/dynamic_fragment_adapter_three_detail_item_username"
+                android:text="11-25"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dynamic_fragment_adapter_three_detail_item_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/five"
+            android:src="@mipmap/btn_follow_normal"
+            />
+
+        <ImageView
+            android:id="@+id/dynamic_fragment_adapter_three_detail_item_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/five"
+            android:layout_toLeftOf="@id/dynamic_fragment_adapter_three_detail_item_guanzhu"
+            android:src="@mipmap/btn_follow_normal"/>
+    </RelativeLayout>
+    <!--第二行-->
+    <TextView
+        android:id="@+id/dynamic_fragment_adapter_three_detail_item_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five"
+        android:layout_marginBottom="@dimen/five"
+        android:ellipsize="marquee"
+        android:maxLines="5"/>
+    <!--第三行-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:layout_margin="@dimen/five">
+
+        <ImageView
+            android:id="@+id/dynamic_fragment_adapter_three_detail_item_pic_large"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+    <!--第四行-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/bt_playall_press"/>
+
+                <ImageView
+                    android:id="@+id/dynamic_fragment_adapter_three_detail_item_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dynamic_fragment_adapter_three_detail_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="水星记"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/dynamic_fragment_adapter_three_detail_item_artist_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="郭顶"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--第五行-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:gravity="center_vertical">
+
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:orientation="horizontal"
+           android:layout_alignParentEnd="true"
+           android:id="@+id/right_ll"
+           >
+        <TextView
+            android:id="@+id/tv_zhuanfa"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/ten"
+            android:text="转发"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_toLeftOf="@id/tv_zhuanfa"
+            android:id="@+id/dynamic_fragment_adapter_three_detail_item_share"
+            android:layout_width="@dimen/forty"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_trendsdetail_trenspond_normal"
+            />
+       </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@id/right_ll"
+            android:id="@+id/center_ll">
+        <TextView
+            android:id="@+id/tv_pinglun"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="评论"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/dynamic_fragment_adapter_three_detail_item_pinglun"
+            android:layout_width="@dimen/forty"
+            android:layout_height="match_parent"
+            android:src="@mipmap/bt_playpage_button_comment_normal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@id/center_ll"
+            android:id="@+id/left_ll">
+        <TextView
+            android:id="@+id/tv_dianzan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="9"
+
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/dynamic_fragment_adapter_three_detail_item_dianzan"
+            android:layout_width="@dimen/forty"
+            android:layout_height="match_parent"
+
+            android:src="@mipmap/icon_comment_like_normal"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

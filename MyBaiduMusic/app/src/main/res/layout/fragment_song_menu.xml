@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+
+              tools:context="com.aqiang.dllo.mybaidumusic.fragment.sonfragment.SongMenuFragment">
+
+   <!--<include layout="@layout/fragment_song_menu_header_view_item"/>-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/song_menu_fragment_rv"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+    <LinearLayout
+
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/fragment_song_menu_ll">
+
+        <ImageView
+            android:layout_width="@dimen/five"
+            android:layout_height="@dimen/fifteen"
+            android:background="#1cb6ed"
+            android:layout_marginLeft="@dimen/ten"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="全部歌单"/>
+
+        <ImageView
+            android:id="@+id/songfragmentmenu_detail_quanbu_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bt_mv_pull_down_normal"/>
+        <LinearLayout
+            android:layout_width="@dimen/onehundredseventy"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/songfragmentmenu_zuire_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fifteen"
+            android:text="最热"
+            />
+        <TextView
+            android:id="@+id/songfragmentmenu_zuixin_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最新"
+            />
+
+
+    </LinearLayout>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/songfragmentmenu_fl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"/>-->
+
+
+
+</RelativeLayout>

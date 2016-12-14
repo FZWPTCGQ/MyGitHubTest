@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+       android:layout_marginLeft="@dimen/ten"
+              android:layout_marginTop="@dimen/forty"
+    >
+
+    <ImageView
+        android:id="@+id/video_fragment_detail_item_thum"
+        android:layout_width="@dimen/oneHundredfifty"
+        android:layout_height="@dimen/oneHundred"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/video_fragment_detail_item_title"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#313131"
+        android:textSize="10sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="mv名" />
+
+    <TextView
+        android:id="@+id/video_fragment_detail_item_artist"
+        android:layout_margin="5dp"
+        android:textSize="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="作者" />
+
+
+
+
+</LinearLayout>

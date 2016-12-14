@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="com.aqiang.dllo.mybaidumusic.adapter.sonadapter.videoFragmentDetailAdapter.VideoHotFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_detail_hot_fragment_rv"/>
+
+</LinearLayout>

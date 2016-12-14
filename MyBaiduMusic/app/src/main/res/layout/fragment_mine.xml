@@ -1,0 +1,483 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aqiang.dllo.mybaidumusic.fragment.fatherfragment.MineFragment">
+    <!--第一行-->
+    <RelativeLayout
+        android:id="@+id/mine_fragment_first_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@mipmap/bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/mine_fragment_first_line_circle_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/marginfive"
+            android:src="@mipmap/img_option_setting_user" />
+
+        <LinearLayout
+            android:id="@+id/mine_fragment_first_line_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/marginten"
+            android:layout_toRightOf="@id/mine_fragment_first_line_circle_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mine_fragment_first_line_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="陈国强"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mine_fragment_first_line_dongtai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="动态"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_first_line_dongtai_param"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:layout_toRightOf="@id/mine_fragment_first_line_dongtai"
+                    android:text="0"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_first_line_guanzhu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/mine_fragment_first_line_dongtai_param"
+                    android:text="关注"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_first_line_guanzhu_param"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:layout_toRightOf="@id/mine_fragment_first_line_guanzhu"
+                    android:text="2"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_first_line_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:layout_toRightOf="@id/mine_fragment_first_line_guanzhu_param"
+                    android:text="粉丝"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_first_line_fans_param"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:layout_toRightOf="@id/mine_fragment_first_line_fans"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/marginfive"
+            android:layout_marginRight="@dimen/marginfive"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mine_fragment_first_line_suibiantingting_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_mymusic_try_press" />
+
+            <TextView
+                android:id="@+id/mine_fragment_first_line_suibiantingting_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="随便听听"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--第二行-->
+    <RelativeLayout
+        android:id="@+id/mine_fragment_two_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/mine_fragment_two_line_bendiyinyue_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:src="@mipmap/ic_mymusic_local_normal" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_two_line_bendiyinyue_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:text="本地音乐"
+                    android:textSize="@dimen/sizefifteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/mine_fragment_two_line_bendiyinyue_tv_params"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textSize="@dimen/sizefifteen"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首"
+                    android:textSize="@dimen/sizefifteen"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/mine_fragment_two_line_bendiyinyue_play_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_play" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--第三行-->
+    <RelativeLayout
+        android:id="@+id/mine_fragment_three_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/mine_fragment_two_line_zuijinbofang_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:src="@mipmap/ic_mymusic_play_normal" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_two_line_zuijinbofang_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:text="最近播放"
+                    android:textSize="@dimen/sizefifteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="共"
+                    android:textSize="@dimen/sizefifteen"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_two_line_zuijinbofang_tv_params"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textSize="@dimen/sizefifteen"
+
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首,"
+                    android:textSize="@dimen/sizefifteen"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_two_line_zuijinbofang_tv_second_params"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textSize="@dimen/sizefifteen"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首离线可播"
+                    android:textSize="@dimen/sizefifteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/mine_fragment_two_line_zuijinbofang_next_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/right_next" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--第四行-->
+    <RelativeLayout
+        android:id="@+id/mine_fragment_four_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/mine_fragment_two_line_wodexiazai_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:src="@mipmap/ic_mymusic_download_normal" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_two_line_wodexiazai_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginfive"
+                    android:text="我的下载"
+                    android:textSize="@dimen/sizefifteen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/mine_fragment_two_line_wodexiazai_tv_params"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textSize="@dimen/sizefifteen"
+
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首"
+                    android:textSize="@dimen/sizefifteen"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/mine_fragment_two_line_wodexiazai_next_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/right_next" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--第五行-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="7.5"
+          android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginten"
+                android:text="自建歌单"
+                android:textSize="@dimen/sizetwenty" />
+      </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center">
+            <TextView
+                android:id="@+id/mine_fragment_five_line_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="新建" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--第六行-->
+    <RelativeLayout
+        android:id="@+id/mine_fragment_six_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+          <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:layout_marginLeft="@dimen/marginten"
+              android:gravity="center_vertical">
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/ic_mymusic_like"
+              />
+      </LinearLayout>
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="3"
+              android:orientation="vertical"
+              android:gravity="center_vertical">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="我喜欢的音乐"/>
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+              <TextView
+                  android:id="@+id/mine_fragment_six_line_like_param"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="0"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="首"/>
+              </LinearLayout>
+
+
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="0.6"
+              android:gravity="center">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/right_next"/>
+          </LinearLayout>
+      </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <!--第七行-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+    </RelativeLayout>
+
+
+</LinearLayout>

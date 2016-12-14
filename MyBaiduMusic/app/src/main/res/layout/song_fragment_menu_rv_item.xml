@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+
+              android:paddingBottom="@dimen/ten"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+        <ImageView
+            android:layout_margin="4dp"
+            android:id="@+id/songfragmentmenu_rv_item_list_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_lebo_listen"
+             />
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="bottom|left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:padding="3dp"
+                android:id="@+id/songfragmentmenu_rv_item_listen_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="听歌人数"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:gravity="bottom|right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/bt_play_press"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/songfragmentmenu_rv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#0e0e0e"
+        android:text="名称(遇见你,在最美的时光)"
+        android:maxLines="1"
+
+        android:ellipsize="end"/>
+
+    <TextView
+        android:textSize="10sp"
+        android:id="@+id/songfragmentmenu_rv_item_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3d3c3c"
+        android:text="详细说明(华语,流行)" />
+
+</LinearLayout>

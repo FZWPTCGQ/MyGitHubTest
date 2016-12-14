@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_rv">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixty"
+            android:background="#00B4FF"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/main_show_draw_iv"
+                    android:layout_width="@dimen/thirty"
+                    android:layout_height="@dimen/thirty"
+                    android:src="@mipmap/bt_localsonglist_move_press" />
+            </LinearLayout>
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/main_tab"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ten"
+                android:layout_weight="1"
+
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="@dimen/thirty"
+                    android:layout_height="@dimen/thirty"
+                    android:background="@mipmap/ic_guide_circle"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/main_activity_seek"
+                        android:layout_width="@dimen/twenty"
+                        android:layout_height="@dimen/twenty"
+                        android:src="@mipmap/abc_ic_search_api_mtrl_alpha" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_vp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/root_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/drawer_item_include" />
+
+
+    </android.support.v4.widget.DrawerLayout>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/root_drawer_seek"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/seek_detail_page_content"/>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+    <!--播放栏-->
+    <LinearLayout
+        android:id="@+id/activity_main_play_music_hurdle_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/main_foot_circle_iv"
+                android:layout_width="@dimen/forty"
+                android:layout_height="@dimen/forty"
+                android:src="@mipmap/ic_lebo_listen" />
+
+            <TextView
+                android:id="@+id/main_foot_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/main_foot_circle_iv"
+
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/main_foot_singer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_foot_name_tv"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/main_foot_circle_iv"
+
+                android:textSize="@dimen/ten" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/song_pause_iv"
+                android:layout_width="@dimen/forty"
+                android:layout_height="@dimen/forty"
+                android:src="@mipmap/song_recognition_btn_play_press" />
+
+            <ImageView
+                android:id="@+id/song_play_iv"
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/thirty"
+                android:src="@mipmap/bt_minibar_pause_normal"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_foot_next_iv"
+                android:layout_width="@dimen/forty"
+                android:layout_height="@dimen/forty"
+                android:background="@mipmap/bt_minibar_next_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_foot_detail_iv"
+                android:layout_width="@dimen/forty"
+                android:layout_height="@dimen/forty"
+                android:background="@mipmap/bt_minibar_playinglist_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

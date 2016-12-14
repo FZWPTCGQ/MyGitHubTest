@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:id="@+id/main_fragment_rv"
+                tools:context="com.aqiang.dllo.mybaidumusic.fragment.mainactivityfragment.MainFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/twoHundred"
+
+        android:layout_below="@+id/main_fragment_vp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/main_fragment_we_like"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/bt_playpage_button_like_normal_new"/>
+
+                <ImageView
+                    android:id="@+id/main_fragment_download"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/main_fragment_we_like"
+                    android:src="@mipmap/bt_playpage_button_download_normal_new"/>
+
+                <ImageView
+                    android:id="@+id/main_fragment_share"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/main_fragment_download"
+                    android:src="@mipmap/bt_playpage_button_share_normal_new"/>
+
+                <ImageView
+                    android:id="@+id/main_fragment_say"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/main_fragment_share"
+                    android:src="@mipmap/bt_playpage_button_comment_normal"/>
+
+                <ImageView
+                    android:id="@+id/main_fragment_more"
+                    android:layout_width="@dimen/seventy"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/main_fragment_say"
+                    android:src="@mipmap/bt_playpage_moreactions_normal_new"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2">
+
+                <SeekBar
+                    android:id="@+id/main_fragment_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center">
+                    <!--播放顺序图片-->
+                    <ImageView
+                        android:id="@+id/main_fragment_shunxu_play_iv"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/bt_playpage_loop_normal_new"/>
+
+                    <ImageView
+                        android:id="@+id/main_fragment_suiji_play_iv"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/bt_playpage_random_normal_new"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/main_fragment_shunxu_one_play_iv"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/bt_playpage_order_normal_new"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/main_fragment_danqu_play_iv"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/bt_playpage_roundsingle_normal_new"
+                        android:visibility="gone"/>
+                    <!--上一曲-->
+                    <ImageView
+                        android:id="@+id/main_fragment_button_pre_iv"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/main_fragment_shunxu_play_iv"
+                        android:src="@mipmap/bt_playpage_button_previous_normal_new"/>
+
+                    <ImageView
+                        android:id="@+id/main_fragment_button_pause_iv"
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/main_fragment_button_pre_iv"
+                        android:src="@mipmap/bt_playall_press"/>
+
+                    <ImageView
+                        android:id="@+id/main_fragment_button_play_iv"
+                        android:layout_width="@dimen/oneHundred"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/main_fragment_button_pre_iv"
+                        android:src="@mipmap/bt_playpage_button_pause_normal_new"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/main_fragment_button_next_iv"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/main_fragment_button_pause_iv"
+                        android:src="@mipmap/bt_playpage_button_next_normal_new"/>
+
+                    <ImageView
+                        android:id="@+id/main_fragment_button_list_iv"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/main_fragment_button_next_iv"
+                        android:src="@mipmap/bt_playpage_button_list_normal_new"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/main_fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fourHundred"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:id="@+id/song_page_return"
+        android:layout_width="@dimen/thirty"
+        android:layout_height="@dimen/thirty"
+        android:layout_margin="@dimen/ten"
+        android:src="@mipmap/bt_playpage_button_return_normal_new"
+        />
+</RelativeLayout>

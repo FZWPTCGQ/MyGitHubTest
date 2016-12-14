@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+        android:text="123456798"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <!--第一行-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dfa_eight_usepic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/dfa_eight_usepic"
+            android:layout_toRightOf="@id/dfa_eight_usepic"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dfa_eight_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你是个好姑娘"
+                />
+
+
+            <TextView
+                android:id="@+id/dfa_eight_ctime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11-25"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dfa_eight_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/five"
+            android:src="@mipmap/btn_follow_normal"
+            />
+
+        <ImageView
+            android:id="@+id/dfa_eight_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/five"
+            android:layout_toLeftOf="@id/dfa_eight_guanzhu"
+            android:src="@mipmap/btn_follow_normal"/>
+    </RelativeLayout>
+    <!--第二行-->
+    <TextView
+        android:id="@+id/dfa_eight_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:maxLines="5"/>
+
+    <!--第四行-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                >
+
+                <ImageView
+                    android:id="@+id/dfa_eight_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/bt_playall_press"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dfa_eight_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="水星记"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/dfa_eight_artist_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="郭顶"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--第五行-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:gravity="center_vertical">
+
+
+        <LinearLayout
+            android:id="@+id/right_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tv_zhuanfa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/ten"
+                android:gravity="center"
+                android:text="转发"/>
+
+            <ImageView
+                android:id="@+id/dfa_eight_share"
+                android:layout_width="@dimen/forty"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/tv_zhuanfa"
+                android:src="@mipmap/icon_trendsdetail_trenspond_normal"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/center_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/right_ll"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_pinglun"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="评论"/>
+
+            <ImageView
+                android:id="@+id/dfa_eight_pinglun"
+                android:layout_width="@dimen/forty"
+                android:layout_height="match_parent"
+                android:src="@mipmap/bt_playpage_button_comment_normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/left_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/center_ll"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_dianzan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:text="9"/>
+
+            <ImageView
+                android:id="@+id/dfa_eight_dianzan"
+                android:layout_width="@dimen/forty"
+                android:layout_height="match_parent"
+
+                android:src="@mipmap/icon_comment_like_normal"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
