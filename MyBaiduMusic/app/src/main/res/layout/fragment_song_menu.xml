@@ -33,8 +33,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:text="全部歌单"/>
+            android:layout_margin="@dimen/three"
+            android:text="@string/allList"/>
 
         <ImageView
             android:id="@+id/songfragmentmenu_detail_quanbu_iv"
@@ -49,13 +49,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/fifteen"
-            android:text="最热"
+
+            android:text="@string/hottest"
             />
         <TextView
             android:id="@+id/songfragmentmenu_zuixin_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="最新"
+            android:text="@string/newest"
             />
 
 

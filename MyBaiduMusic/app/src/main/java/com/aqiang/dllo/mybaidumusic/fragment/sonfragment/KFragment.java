@@ -12,11 +12,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.aqiang.dllo.mybaidumusic.R;
-import com.aqiang.dllo.mybaidumusic.grideimageloader.GrideImageLoader;
+import com.aqiang.dllo.mybaidumusic.tool.grideimageloader.GrideImageLoader;
 import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.kFragmentSonDetailAdapter.KFragmentAdapter;
 import com.aqiang.dllo.mybaidumusic.bean.sonBean.KFragmentBean;
 import com.aqiang.dllo.mybaidumusic.bean.sonBean.KFragmentBeanLunBo;
 import com.aqiang.dllo.mybaidumusic.tool.urlTools.Tools;
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetHelper;
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetListener;
 import com.google.gson.Gson;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -34,9 +36,7 @@ public class KFragment extends SonBaseFragment {
     private ListView mListView;
     private KFragmentBean mKFragmentBean;
     private KFragmentAdapter mKFragmentAdapter;
-//    private String path = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.0.0&channel=wandoujia&operator=3&method=baidu.ting.learn.now&page_size=50";
-//
-//    private String url = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.0.0&channel=wandoujia&operator=3&method=baidu.ting.active.showList";
+
     private Banner mBanner;
 
     @Override
@@ -106,22 +106,38 @@ public class KFragment extends SonBaseFragment {
     }
 
     private void parseInternet() {
-        RequestQueue requestQueue = Volley.newRequestQueue(context);
-        StringRequest stringRequest = new StringRequest(Tools.KList, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                mKFragmentBean = gson.fromJson(response,KFragmentBean.class);
-                mKFragmentAdapter.setKFragmentBean(mKFragmentBean);
-                mListView.setAdapter(mKFragmentAdapter);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
+//        RequestQueue requestQueue = Volley.newRequestQueue(context);
+//        StringRequest stringRequest = new StringRequest(Tools.KList, new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String response) {
+//                Gson gson = new Gson();
+//                mKFragmentBean = gson.fromJson(response,KFragmentBean.class);
+//                mKFragmentAdapter.setKFragmentBean(mKFragmentBean);
+//                mListView.setAdapter(mKFragmentAdapter);
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//
+//            }
+//        });
+//        requestQueue.add(stringRequest);
+        /**
+         * volley二次封装
+         */
+      NetHelper.MyRequest(Tools.KList, KFragmentBean.class, new NetListener<KFragmentBean>() {
+          @Override
+          public void successListener(KFragmentBean response) {
+              mKFragmentBean = response;
+              mKFragmentAdapter.setKFragmentBean(mKFragmentBean);
+              mListView.setAdapter(mKFragmentAdapter);
+          }
 
-            }
-        });
-        requestQueue.add(stringRequest);
+          @Override
+          public void errorListener(VolleyError error) {
+
+          }
+      });
         View view = LayoutInflater.from(context).inflate(R.layout.k_fragment_header_view_item,mListView,false);
         mBanner = (Banner)view.findViewById(R.id.banner);
         mListView.addHeaderView(view);

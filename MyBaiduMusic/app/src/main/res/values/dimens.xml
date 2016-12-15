@@ -47,5 +47,19 @@
     <dimen name="sizefifteen">15sp</dimen>
     <dimen name="sizefive">5sp</dimen>
     <dimen name="sizethirteen">13sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="twoHundredSixty">260dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="two">2dp</dimen>
+    <dimen name="one">1dp</dimen>
+    <dimen name="twentyTwo">22dp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="margintwo">2dp</dimen>
+    <dimen name="sizeTwelve">12sp</dimen>
+    <dimen name="marginfour">4dp</dimen>
 
 </resources>

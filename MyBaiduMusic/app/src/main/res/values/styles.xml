@@ -8,4 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <!--设置popupWindow动画-->
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/fragment_in</item>
+        <item name="android:windowExitAnimation">@anim/fragment_out</item>
+    </style>
+    <!--设置popupWindow动画-->
+    <style name="pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
 </resources>

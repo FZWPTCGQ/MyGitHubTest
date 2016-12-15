@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="我的K歌"
+            android:text="@string/k"
             android:layout_toRightOf="@id/ktv_iv"
             android:layout_marginLeft="@dimen/five"
             />
@@ -53,14 +53,14 @@
             android:gravity="center">
         <ImageView
 
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/oneHundred"
+            android:layout_height="@dimen/oneHundred"
             android:src="@mipmap/img_k_ktv"
             android:layout_gravity="center"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="KTV热歌榜"
+                android:text="@string/ktv"
                 android:gravity="center"/>
         </LinearLayout>
         <LinearLayout
@@ -79,7 +79,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="华语金曲"
+            android:text="@string/huayujinqu"
             android:gravity="center"/>
         </LinearLayout>
         <LinearLayout
@@ -98,7 +98,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="欧美歌手"
+            android:text="@string/oumeigeshou"
             android:gravity="center"/>
         </LinearLayout>
         <LinearLayout
@@ -117,7 +117,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="男歌手"
+                android:text="@string/men"
                 android:gravity="center"/>
         </LinearLayout>
         <LinearLayout
@@ -137,7 +137,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="女歌手"
+                android:text="@string/women"
                 android:gravity="center"/>
         </LinearLayout>
         <LinearLayout
@@ -157,7 +157,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="乐队组合"
+                android:text="@string/bank"
                 android:gravity="center"/>
         </LinearLayout>
     </RelativeLayout>
@@ -178,7 +178,7 @@
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="match_parent"
-           android:text="大家都在唱"
+           android:text="@string/together"
            android:gravity="center_vertical"/>
    </LinearLayout>
 

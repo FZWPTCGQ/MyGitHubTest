@@ -1,5 +1,8 @@
 package com.aqiang.dllo.mybaidumusic.tool.urlTools;
 
+import com.aqiang.dllo.mybaidumusic.adapter.SeekRV;
+import com.aqiang.dllo.mybaidumusic.bean.SeekBean;
+
 /**
  * Created by dllo on 16/11/26.
  */
@@ -54,6 +57,74 @@ public class Tools {
      * 推荐界面
      */
     public static final String RFList = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.0.0&channel=360safe&operator=3&method=baidu.ting.plaza.index&cuid=FD91A86A9F44B1249C42381F417D4253";
+    /**
+     * 榜单详情页网址
+     * 363722213
+     */
+    public static final String MLDUrl = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.0.0&channel=wandoujia&operator=3&method=baidu.ting.billboard.billList&format=json&type=参数&offset=0&size=100&fields=song_id%2Ctitle%2Cauthor%2Calbum_title%2Cpic_big%2Cpic_small%2Chavehigh%2Call_rate%2Ccharge%2Chas_mv_mobile%2Clearn%2Csong_source%2Ckorean_bb_song";
+    /**
+     * 音乐界面榜单界面音乐网址前半部分
+     */
+    public static final String PLAY_MUSIC_BEFORE = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=webapp_music&method=baidu.ting.song.play&format=json&callback=&songid=";
+    /**
+     * 音乐界面榜单界面音乐网址后半部分
+     */
+    public static final String PLAY_MUSIC_AFTER = "&_=1413017198449";
+
+    /**
+     * 歌单详情页面的网址
+     */
+    public static final String SONG_MUSIC_LIST_DETAIL_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.8.2.0&channel=ppzs&operator=0&method=baidu.ting.diy.gedanInfo&format=json&listid=参数&isUGC=0";
+
+    /**
+     * 歌曲播放模式
+     */
+    //顺序
+    public static final int SONG_PLAY_MODE_ORDER = 1;
+    //单曲
+    public static final int SONG_PLAY_MODE_SINGLE = 2;
+    //循环
+    public static final int SONG_PLAY_MODE_CYCLE = 3;
+    //随机
+    public static final int SONG_PLAY_MODE_RANDOM = 4;
 
 
+    /**
+     * 中间弹出的popWindow左边页面列表网址
+     */
+  //  public static final String LEFT_DETAIL_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.song.getRecommandSongList&song_id=参数&num=7";
+  //  private String path = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.song.getRecommandSongList&song_id=266322598&num=7";
+      public static final String LEFT_DETAIL_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.song.getRecommandSongList&song_id=参数&num=7";
+    /**
+     * 直播界面的详情页面网址
+     */
+    //全部
+    public static final String LIVE_ONE = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=1&category=hot";
+    //女神
+    public static final String LIVE_TWO = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=1&category=3";
+    //好声音
+    public static final String LIVE_THREE = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=1&category=new";
+    //新秀
+    public static final String LIVE_FOUR = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=1&category=new";
+    //劲爆
+    public static final String LIVE_FIVE = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=1&category=15";
+    //搞笑
+    public static final String LIVE_SIX = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=1&category=1";
+    //萌妹
+    public static final String LIVE_SEVEN = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=1&category=15";
+    //推荐
+    public static final String LIVE_EIGHT = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.show.item&page_size=30&page_no=4&category=recommend";
+
+
+    //广播过滤器
+    public static final String ACTION_MAINBR = "MainBR";
+    public static final String ACTION_MP3 = "mp3";
+    public static final String ACTION_REPLACE = "replace";
+
+    //搜索页网址
+    public static final String SEEK_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.search.hot";
+    //搜索内容网址
+//    public static final String SEEK_DETAIL_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=3&method=baidu.ting.search.catalogSug&format=json&query=参数";
+//    public static final String SEEK_DETAIL_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=-1&method=baidu.ting.search.catalogSug&format=json&query=参数";
+    public static final String SEEK_DETAIL_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.5.1&channel=1426d&operator=-1&method=baidu.ting.search.catalogSug&format=json&query=参数";
 }

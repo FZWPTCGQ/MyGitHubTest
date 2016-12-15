@@ -1,13 +1,103 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.aqiang.dllo.mybaidumusic.fragment.mainactivityfragment.ThreeFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:alpha="0.8"
+                tools:context="com.aqiang.dllo.mybaidumusic.fragment.mainactivityfragment.MiddleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
+        android:id="@+id/background_ig"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:scaleType="fitXY"
+        android:layout_marginBottom="@dimen/five"
+        android:src="@mipmap/ic_launcher"
+        />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/middle_above_pic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:background="#6E6E6E"/>
+
+        <ImageView
+            android:id="@+id/middle_below_pic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="0.7"
+            android:background="#fff"/>
+    </LinearLayout>
+
+
+    <!--具体内容中间部分-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="@dimen/twoHundredSixty"
+            android:layout_height="@dimen/twoHundredSixty"
+            android:layout_gravity="center"
+            app:cardElevation="@dimen/five"
+            app:cardCornerRadius="@dimen/five"
+
+           >
+            <RelativeLayout
+
+                android:layout_width="@dimen/twoHundredSixty"
+                android:layout_height="@dimen/twoHundredSixty"
+                >
+                <ImageView
+                    android:id="@+id/middle_author_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/abc_list_divider_mtrl_alpha"
+                    />
+                <ImageView
+                    android:id="@+id/middle_iv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/default_album_playing_new"/>
+                <ImageView
+                    android:id="@+id/middle_iv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/bt_playpage_button_searchpicandlyric_press_new"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <TextView
+            android:layout_marginTop="@dimen/ten"
+            android:id="@+id/middle_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/music"
+            android:textSize="@dimen/twenty"
+            android:gravity="center"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/five"
+            android:id="@+id/middle_author_tv"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/singer"
+            android:textColor="#434343"/>
+    </LinearLayout>
+</RelativeLayout>

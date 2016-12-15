@@ -20,20 +20,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#313131"
-        android:textSize="10sp"
+        android:textSize="@dimen/sizeten"
         android:maxLines="1"
         android:ellipsize="end"
-        android:text="mv名" />
+        android:text="@string/ming" />
 
     <TextView
         android:id="@+id/video_fragment_detail_item_artist"
-        android:layout_margin="5dp"
-        android:textSize="10sp"
+        android:layout_margin="@dimen/marginfive"
+        android:textSize="@dimen/sizeten"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="1"
         android:ellipsize="end"
-        android:text="作者" />
+        android:text="@string/author" />
 
 
 

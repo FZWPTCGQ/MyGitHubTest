@@ -7,7 +7,7 @@
    >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="5">
         <ImageView
             android:id="@+id/live_fragment_content_item_detail_item_liveimg"
@@ -29,7 +29,6 @@
             android:id="@+id/live_fragment_content_item_detail_item_usercount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5228"
 
             android:layout_toRightOf="@id/iv"
             android:layout_alignTop="@id/iv"
@@ -45,9 +44,8 @@
     <TextView
         android:id="@+id/live_fragment_content_item_detail_item_nickname"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="1"
-        android:text="点击领取媳妇一枚"
         android:gravity="center_vertical"/>
 
 </LinearLayout>

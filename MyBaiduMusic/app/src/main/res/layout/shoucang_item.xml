@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginten"
+        android:layout_marginLeft="@dimen/marginfive"
+        android:layout_marginTop="@dimen/marginten"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shoucang_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#121111"
+            android:textSize="@dimen/twenty"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/marginfive"
+            android:id="@+id/shoucang_use_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#605f5f"
+            android:textSize="@dimen/fifteen"
+          />
+    </LinearLayout>
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_list_dropdown_garbage_normal" />
+</LinearLayout>

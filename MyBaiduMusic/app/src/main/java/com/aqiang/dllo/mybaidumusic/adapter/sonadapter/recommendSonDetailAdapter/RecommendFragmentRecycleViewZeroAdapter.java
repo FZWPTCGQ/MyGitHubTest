@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.aqiang.dllo.mybaidumusic.R;
 import com.aqiang.dllo.mybaidumusic.bean.sonBean.RecommendFragmentRecycleViewBean;
+import com.aqiang.dllo.mybaidumusic.tool.RVListener.OnItemClickListener;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -20,7 +21,11 @@ public class RecommendFragmentRecycleViewZeroAdapter extends RecyclerView.Adapte
     private RecommendFragmentRecycleViewBean recommendFragmentRecycleViewBean;
     private Context context;
     int pos;
+    private OnItemClickListener mOnItemClickListener;
 
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
 
     public RecommendFragmentRecycleViewZeroAdapter(Context context, int pos) {
         this.context = context;
@@ -40,9 +45,19 @@ public class RecommendFragmentRecycleViewZeroAdapter extends RecyclerView.Adapte
     }
 
     @Override
-    public void onBindViewHolder(RecommendFragmentRecycleViewZeroAdapter.RECONE holder, int position) {
+    public void onBindViewHolder(final RecommendFragmentRecycleViewZeroAdapter.RECONE holder, final int position) {
         holder.textView.setText(recommendFragmentRecycleViewBean.getResult().getDiy().getResult().get(position).getTitle());
         Picasso.with(context).load(recommendFragmentRecycleViewBean.getResult().getDiy().getResult().get(position).getPic()).into(holder.imageView);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnItemClickListener != null){
+                    int p = holder.getLayoutPosition();
+                    String listId = recommendFragmentRecycleViewBean.getResult().getDiy().getResult().get(position).getListid();
+                    mOnItemClickListener.onItemClickListener(p,listId);
+                }
+            }
+        });
     }
 
     @Override

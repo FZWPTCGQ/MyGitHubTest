@@ -2,22 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="@dimen/sixty"
     android:layout_gravity="center">
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_vertical">
    <ImageView
-       android:layout_width="40dp"
+       android:layout_width="@dimen/forty"
        android:layout_height="40dp"
        android:id="@+id/rec_item_detail_seven_pic_iv"
        android:src="@mipmap/ic_launcher"
        android:layout_margin= "@dimen/marginfive"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="match_parent"
         android:layout_weight="3"
         android:orientation="vertical"
@@ -25,21 +25,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="手机客服哈快速点击返回拉萨结"
             android:textSize="@dimen/sizeten"
             android:textStyle="bold"
             android:id="@+id/rec_item_detail_seven_title_tv"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="恢复健康撒谎发接开关阀就是"
             android:singleLine="true"
             android:ellipsize="marquee"
             android:textSize="@dimen/sizethirteen"
             android:id="@+id/rec_item_detail_seven_desc_tv"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center">

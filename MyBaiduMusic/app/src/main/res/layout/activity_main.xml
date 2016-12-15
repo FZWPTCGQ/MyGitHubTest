@@ -2,69 +2,85 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_rv">
+    android:id="@+id/main_rv"
+    >
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/main_fragment_fl">
 
         <LinearLayout
+
+            android:id="@+id/main_all_framelayout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/sixty"
-            android:background="#00B4FF"
-            android:orientation="horizontal">
-
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/root_drawer"
+            android:layout_alignParentStart="true">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty"
+                android:background="#00B4FF"/>
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/main_show_draw_iv"
-                    android:layout_width="@dimen/thirty"
-                    android:layout_height="@dimen/thirty"
-                    android:src="@mipmap/bt_localsonglist_move_press" />
-            </LinearLayout>
-
-
-            <android.support.design.widget.TabLayout
-                android:id="@+id/main_tab"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="4" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/ten"
-                android:layout_weight="1"
-
-                android:gravity="center">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00B4FF"
+                android:orientation="horizontal"
+                >
 
                 <LinearLayout
-                    android:layout_width="@dimen/thirty"
-                    android:layout_height="@dimen/thirty"
-                    android:background="@mipmap/ic_guide_circle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
-                        android:id="@+id/main_activity_seek"
-                        android:layout_width="@dimen/twenty"
-                        android:layout_height="@dimen/twenty"
-                        android:src="@mipmap/abc_ic_search_api_mtrl_alpha" />
+                        android:id="@+id/main_show_draw_iv"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="@dimen/thirty"
+                        android:src="@mipmap/bt_localsonglist_move_press" />
                 </LinearLayout>
 
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/main_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/ten"
+                    android:layout_weight="1"
+
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="@dimen/thirty"
+                        android:background="@mipmap/ic_guide_circle"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/main_activity_seek"
+                            android:layout_width="@dimen/twenty"
+                            android:layout_height="@dimen/twenty"
+                            android:src="@mipmap/abc_ic_search_api_mtrl_alpha" />
+                    </LinearLayout>
+
+                </LinearLayout>
             </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/main_vp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
         </LinearLayout>
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/main_vp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
+    </FrameLayout>
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/root_drawer"
@@ -87,54 +103,59 @@
 
     </android.support.v4.widget.DrawerLayout>
 
-
+    <include layout="@layout/pop_detail_background"
+        android:visibility="gone"/>
     <!--播放栏-->
     <LinearLayout
         android:id="@+id/activity_main_play_music_hurdle_ll"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/forty"
-        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/fifty"
         android:background="#fff"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="match_parent"
             android:layout_weight="4"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+           >
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/main_foot_circle_iv"
                 android:layout_width="@dimen/forty"
                 android:layout_height="@dimen/forty"
-                android:src="@mipmap/ic_lebo_listen" />
+                android:layout_margin="@dimen/five"
+                android:src="@mipmap/default_album_playing_new"
+               />
 
             <TextView
                 android:id="@+id/main_foot_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/marginfive"
+                android:layout_marginTop="@dimen/margineight"
                 android:layout_toRightOf="@id/main_foot_circle_iv"
-
-                android:textSize="@dimen/fifteen"
-                android:textStyle="bold" />
+                android:textSize="@dimen/ten"
+                android:textStyle="bold"
+                />
 
             <TextView
                 android:id="@+id/main_foot_singer_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/main_foot_name_tv"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/marginfive"
                 android:layout_toRightOf="@id/main_foot_circle_iv"
-
+                android:layout_marginTop="@dimen/five"
                 android:textSize="@dimen/ten" />
         </RelativeLayout>
 
 
         <RelativeLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
@@ -143,20 +164,22 @@
                 android:id="@+id/song_pause_iv"
                 android:layout_width="@dimen/forty"
                 android:layout_height="@dimen/forty"
-                android:src="@mipmap/song_recognition_btn_play_press" />
+                android:src="@mipmap/bt_minibar_play_normal"
+                android:layout_centerInParent="true"/>
 
             <ImageView
                 android:id="@+id/song_play_iv"
                 android:layout_width="@dimen/thirty"
                 android:layout_height="@dimen/thirty"
                 android:src="@mipmap/bt_minibar_pause_normal"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
 
         </RelativeLayout>
 
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
@@ -169,7 +192,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">

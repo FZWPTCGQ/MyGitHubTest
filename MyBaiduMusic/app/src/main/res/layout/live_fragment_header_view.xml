@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
@@ -27,12 +27,12 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="全部"
+                android:text="@string/quanbu"
                 android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
@@ -47,12 +47,12 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="女神"
+                android:text="@string/nvgold"
                 android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -66,12 +66,12 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="好声音"
+                android:text="@string/goodSong"
                 android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -85,7 +85,7 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="新秀"
+                android:text="@string/newXiu"
                 android:gravity="center"/>
         </LinearLayout>
     </LinearLayout>
@@ -96,7 +96,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
@@ -111,12 +111,12 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="劲爆"
+                android:text="@string/jinbo"
                 android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
@@ -131,12 +131,12 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="搞笑"
+                android:text="@string/gaoxiao"
                 android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -150,12 +150,12 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="萌妹"
+                android:text="@string/mengmei"
                 android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -169,7 +169,7 @@
                 android:layout_marginTop="@dimen/ten"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="推荐"
+                android:text="@string/tuijian"
                 android:gravity="center"/>
         </LinearLayout>
     </LinearLayout>
@@ -199,7 +199,7 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@id/iv"
             android:gravity="center"
-            android:text="热门视频"
+            android:text="@string/newViedo"
             android:textSize="@dimen/twenty"/>
 
 
@@ -219,7 +219,7 @@
             android:layout_marginRight="@dimen/fifteen"
             android:layout_toLeftOf="@id/video_fragment_zuire_tv"
             android:gravity="center"
-            android:text="更多"
+            android:text="@string/more"
             android:textSize="@dimen/twenty"/>
     </RelativeLayout>
 </LinearLayout>

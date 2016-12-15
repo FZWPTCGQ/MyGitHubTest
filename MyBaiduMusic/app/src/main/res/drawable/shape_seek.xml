@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--框的宽度,周边颜色-->
+    <!--<stroke-->
+        <!--android:width="2dp"-->
+        <!--android:color="#dedcdd"/>-->
+    <!--框内背景颜色-->
+    <!--<solid android:color="#ffffff"/>-->
+   <stroke android:width="6dp"
+           android:color="#0dacf5"/>
+    <solid android:color="#ffffff"/>
+
+
+</shape>

@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/mine_fragment_first_line_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="3"
         android:background="@mipmap/bg">
 
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/marginfive"
+            android:layout_margin="@dimen/margineight"
             android:src="@mipmap/img_option_setting_user" />
 
         <LinearLayout
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="陈国强"
+                android:text="@string/useName"
                 android:textColor="@color/white" />
 
             <RelativeLayout
@@ -46,7 +46,7 @@
                     android:id="@+id/mine_fragment_first_line_dongtai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="动态"
+                    android:text="@string/dy"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
                     android:layout_toRightOf="@id/mine_fragment_first_line_dongtai"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@id/mine_fragment_first_line_dongtai_param"
-                    android:text="关注"
+                    android:text="@string/look"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
                     android:layout_toRightOf="@id/mine_fragment_first_line_guanzhu"
-                    android:text="2"
+                    android:text="@string/two"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
                     android:layout_toRightOf="@id/mine_fragment_first_line_guanzhu_param"
-                    android:text="粉丝"
+                    android:text="@string/fan"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
                     android:layout_toRightOf="@id/mine_fragment_first_line_fans"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textColor="@color/white" />
             </RelativeLayout>
         </LinearLayout>
@@ -116,7 +116,7 @@
                 android:id="@+id/mine_fragment_first_line_suibiantingting_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="随便听听"
+                android:text="@string/suibian"
                 android:textColor="@color/white" />
         </LinearLayout>
     </RelativeLayout>
@@ -126,7 +126,7 @@
     <RelativeLayout
         android:id="@+id/mine_fragment_two_line_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="1">
 
         <LinearLayout
@@ -135,7 +135,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center_vertical">
@@ -152,12 +152,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
-                    android:text="本地音乐"
+                    android:text="@string/localMusic"
                     android:textSize="@dimen/sizefifteen" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center_vertical">
@@ -168,20 +168,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
                     android:gravity="center_vertical"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textSize="@dimen/sizefifteen"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="首"
+                    android:text="@string/shou"
                     android:textSize="@dimen/sizefifteen"
                     android:textStyle="normal" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="0.7"
                 android:gravity="center">
@@ -200,7 +200,7 @@
     <RelativeLayout
         android:id="@+id/mine_fragment_three_line_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="1">
 
         <LinearLayout
@@ -209,7 +209,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center_vertical">
@@ -226,12 +226,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
-                    android:text="最近播放"
+                    android:text="@string/nearPlay"
                     android:textSize="@dimen/sizefifteen" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center_vertical">
@@ -239,7 +239,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="共"
+                    android:text="@string/all"
                     android:textSize="@dimen/sizefifteen"
                     android:textStyle="normal" />
 
@@ -248,7 +248,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textSize="@dimen/sizefifteen"
 
                     android:textStyle="normal" />
@@ -256,7 +256,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="首,"
+                    android:text="@string/shoudouhao"
                     android:textSize="@dimen/sizefifteen"
                     android:textStyle="normal" />
 
@@ -266,19 +266,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
                     android:gravity="center_vertical"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textSize="@dimen/sizefifteen"
                     android:textStyle="normal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="首离线可播"
+                    android:text="@string/likai"
                     android:textSize="@dimen/sizefifteen" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="0.7"
                 android:gravity="center">
@@ -297,7 +297,7 @@
     <RelativeLayout
         android:id="@+id/mine_fragment_four_line_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="1">
 
         <LinearLayout
@@ -306,7 +306,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:gravity="center_vertical">
@@ -323,12 +323,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/marginfive"
-                    android:text="我的下载"
+                    android:text="@string/myDownload"
                     android:textSize="@dimen/sizefifteen" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:gravity="center_vertical">
@@ -338,7 +338,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textSize="@dimen/sizefifteen"
 
                     android:textStyle="normal" />
@@ -346,14 +346,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="首"
+                    android:text="@string/shou"
                     android:textSize="@dimen/sizefifteen"
                     android:textStyle="normal" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="0.7"
                 android:gravity="center">
@@ -371,7 +371,7 @@
     <!--第五行-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="1">
 
         <LinearLayout
@@ -380,7 +380,7 @@
             android:orientation="horizontal"
             >
       <LinearLayout
-          android:layout_width="0dp"
+          android:layout_width="@dimen/zero"
           android:layout_height="match_parent"
           android:layout_weight="7.5"
           android:gravity="center_vertical">
@@ -388,11 +388,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/marginten"
-                android:text="自建歌单"
+                android:text="@string/meself"
                 android:textSize="@dimen/sizetwenty" />
       </LinearLayout>
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
                 android:gravity="center">
@@ -401,7 +401,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="新建" />
+                android:text="@string/newJian" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
@@ -411,14 +411,14 @@
     <RelativeLayout
         android:id="@+id/mine_fragment_six_line_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="2">
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:orientation="horizontal">
           <LinearLayout
-          android:layout_width="0dp"
+          android:layout_width="@dimen/zero"
           android:layout_height="match_parent"
           android:layout_weight="1"
           android:layout_marginLeft="@dimen/marginten"
@@ -430,7 +430,7 @@
               />
       </LinearLayout>
           <LinearLayout
-              android:layout_width="0dp"
+              android:layout_width="@dimen/zero"
               android:layout_height="match_parent"
               android:layout_weight="3"
               android:orientation="vertical"
@@ -438,7 +438,7 @@
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="我喜欢的音乐"/>
+                 android:text="@string/myLikeMusic"/>
               <LinearLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -447,17 +447,17 @@
                   android:id="@+id/mine_fragment_six_line_like_param"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:text="0"/>
+                  android:text="@string/zero"/>
                   <TextView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:text="首"/>
+                      android:text="@string/shou"/>
               </LinearLayout>
 
 
           </LinearLayout>
           <LinearLayout
-              android:layout_width="0dp"
+              android:layout_width="@dimen/zero"
               android:layout_height="match_parent"
               android:layout_weight="0.6"
               android:gravity="center">
@@ -474,9 +474,9 @@
     <!--第七行-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="3">
-
+    <include layout="@layout/mine_fragment_include_layout"/>
     </RelativeLayout>
 
 

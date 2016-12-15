@@ -4,13 +4,13 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
     <TextView
-        android:text="123456798"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <!--第一行-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/seventy"
 
         android:gravity="center_vertical">
 
@@ -32,7 +32,7 @@
                 android:id="@+id/dfa_eight_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="你是个好姑娘"
+
                 />
 
 
@@ -40,7 +40,7 @@
                 android:id="@+id/dfa_eight_ctime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11-25"/>
+                />
         </LinearLayout>
 
         <ImageView
@@ -71,7 +71,7 @@
     <!--第四行-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/seventy"
 
         >
 
@@ -81,7 +81,7 @@
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
                 >
@@ -101,7 +101,7 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
                 android:gravity="center_vertical"
@@ -126,7 +126,7 @@
     <!--第五行-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/seventy"
 
         android:gravity="center_vertical">
 

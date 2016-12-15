@@ -18,7 +18,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="5dp"
+            android:layout_width="@dimen/five"
             android:layout_height="@dimen/fifteen"
             android:background="#1cb6ed"
             android:layout_marginLeft="@dimen/ten"/>
@@ -27,8 +27,8 @@
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:text="全部"/>
+            android:layout_margin="@dimen/three"
+            android:text="@string/all"/>
 
         <ImageView
             android:id="@+id/video_fragment_pull_down"
@@ -43,13 +43,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/fifteen"
-            android:text="最热"
+            android:text="@string/hottest"
             />
         <TextView
             android:id="@+id/video_fragment_zuixin_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="最新"
+            android:text="@string/newest"
             />
 
 

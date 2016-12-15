@@ -1,6 +1,7 @@
 package com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -10,18 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aqiang.dllo.mybaidumusic.R;
-import com.aqiang.dllo.mybaidumusic.grideimageloader.GrideImageLoader;
+import com.aqiang.dllo.mybaidumusic.bean.grandSonDetailBean.SongMenuDetailBean;
+import com.aqiang.dllo.mybaidumusic.tool.RVListener.OnItemClickListener;
+import com.aqiang.dllo.mybaidumusic.tool.grideimageloader.GrideImageLoader;
 
 import com.aqiang.dllo.mybaidumusic.bean.sonBean.RecommendFragmentRecycleViewBean;
-import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewFiveAdapter;
-import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewFourAdapter;
-import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewOneAdapter;
-import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewSevenAdapter;
-import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewSixAdapter;
-import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewTwoAdapter;
-import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewZeroAdapter;
 import com.squareup.picasso.Picasso;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -288,6 +285,11 @@ public class RecommendFragmentRecycleViewAdapter extends RecyclerView.Adapter {
         one.recyclerViewOne.setLayoutManager(manager1);
     }
 
+
+    /**
+     * 推荐歌单推荐
+     * @param holder
+     */
     private void methodOne(ViewHolderOne holder) {
         ViewHolderOne zero = holder;
         Picasso.with(context).load(recommendFragmentRecycleViewBean.getModule().get(3).getPicurl()).into(zero.imageViewOne);
@@ -297,6 +299,25 @@ public class RecommendFragmentRecycleViewAdapter extends RecyclerView.Adapter {
         zero.recyclerViewOne.setAdapter(recommendFragmentRecycleViewOne);
         StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         zero.recyclerViewOne.setLayoutManager(manager);
+        recommendFragmentRecycleViewOne.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClickListener(int position, String songIdList) {
+                Toast.makeText(context, "点击了", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent("replace");
+                intent.putExtra("type", 2);
+                intent.putExtra("listId", songIdList);
+                Log.d("RecommendFragmentRecycl", songIdList);
+                intent.putExtra("position", position);
+                context.sendBroadcast(intent);
+
+
+            }
+
+            @Override
+            public void method(int position, SongMenuDetailBean songMenuDetailBean) {
+
+            }
+        });
     }
 
 

@@ -14,6 +14,8 @@ import com.aqiang.dllo.mybaidumusic.R;
 import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.recommendSonDetailAdapter.RecommendFragmentRecycleViewAdapter;
 import com.aqiang.dllo.mybaidumusic.bean.sonBean.RecommendFragmentRecycleViewBean;
 import com.aqiang.dllo.mybaidumusic.tool.urlTools.Tools;
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetHelper;
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetListener;
 import com.google.gson.Gson;
 
 /**
@@ -28,7 +30,7 @@ public class RecommendFragment extends SonBaseFragment {
 
 
 
-//    private String path = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.9.0.0&channel=360safe&operator=3&method=baidu.ting.plaza.index&cuid=FD91A86A9F44B1249C42381F417D4253";
+
     private RecommendFragmentRecycleViewBean recommendFragmentRecycleViewBean;
     private RecommendFragmentRecycleViewAdapter recommendFragmentRecycleViewAdapter;
     private RecyclerView recyclerView;
@@ -42,7 +44,7 @@ public class RecommendFragment extends SonBaseFragment {
     void initView(View view) {
 
         recyclerView = (RecyclerView) getView().findViewById(R.id.recommendFragment_rv);
-
+        recommendFragmentRecycleViewAdapter = new RecommendFragmentRecycleViewAdapter(getContext());
     }
 
     @Override
@@ -59,27 +61,41 @@ public class RecommendFragment extends SonBaseFragment {
 
 
     private void parseData() {
-        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-        StringRequest stringRequest = new StringRequest(Tools.RFList, new Response.Listener<String>() {
+//        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+//        StringRequest stringRequest = new StringRequest(Tools.RFList, new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String response) {
+//                Gson gson = new Gson();
+//                 recommendFragmentRecycleViewBean = gson.fromJson(response,RecommendFragmentRecycleViewBean.class);
+//                 recommendFragmentRecycleViewAdapter = new RecommendFragmentRecycleViewAdapter(getContext());
+//                recommendFragmentRecycleViewAdapter.setRecommendFragmentRecycleViewBean(recommendFragmentRecycleViewBean);
+//                recyclerView.setAdapter(recommendFragmentRecycleViewAdapter);
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//
+//            }
+//        });
+//        requestQueue.add(stringRequest);
+        /**
+         * volley二次分装
+         */
+        NetHelper.MyRequest(Tools.RFList, RecommendFragmentRecycleViewBean.class, new NetListener<RecommendFragmentRecycleViewBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                 recommendFragmentRecycleViewBean = gson.fromJson(response,RecommendFragmentRecycleViewBean.class);
-                 recommendFragmentRecycleViewAdapter = new RecommendFragmentRecycleViewAdapter(getContext());
+            public void successListener(RecommendFragmentRecycleViewBean response) {
+                recommendFragmentRecycleViewBean = response;
                 recommendFragmentRecycleViewAdapter.setRecommendFragmentRecycleViewBean(recommendFragmentRecycleViewBean);
                 recyclerView.setAdapter(recommendFragmentRecycleViewAdapter);
-
                 LinearLayoutManager manager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
                 recyclerView.setLayoutManager(manager);
-
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
         });
-        requestQueue.add(stringRequest);
     }
 
 }

@@ -7,7 +7,7 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="25dp"
+        android:layout_height="@dimen/marginTwenty_five"
         android:layout_margin="@dimen/five"
         android:gravity="center">
 
@@ -15,7 +15,7 @@
             android:id="@+id/remen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="热门话题"
+            android:text="@string/HotSay"
 
             />
 
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="更多"/>
+            android:text="@string/more"/>
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView

@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#fff"
+             tools:context="com.aqiang.dllo.mybaidumusic.fragment.sonfragment.LikeDetailFragment">
+
+    <FrameLayout
+        android:id="@+id/fra_mi_my_like_song_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oneHundredtwenty"
+        android:background="#000">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/like"
+                    android:textColor="#fff"
+                    />
+
+                <TextView
+                    android:id="@+id/fra_mi_my_like_song_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:text="@string/songCount"
+                    android:textColor="#fff"
+                    />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginten"
+                android:layout_marginRight="@dimen/ten"
+                android:src="@mipmap/bt_play_press" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/fra_mi_my_like_song_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginfive"
+            android:src="@mipmap/bt_return_nor" />
+    </FrameLayout>
+    <!--立即登录-->
+    <LinearLayout
+        android:background="#d2cfcf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:padding="@dimen/five"
+            android:textColor="#00b7ff"
+            android:text="立即登录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five"/>
+        <TextView
+            android:text="登陆后,自动为您同步歌曲"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--wifi自动下载-->
+    <LinearLayout
+        android:layout_marginTop="@dimen/marginfive"
+        android:layout_marginBottom="@dimen/marginfive"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="@dimen/five"
+            android:text="@string/autoDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Switch
+            android:layout_marginLeft="@dimen/marginfive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="@dimen/zero"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/marginfive"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/middle_listview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_weight="1"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"/>
+</LinearLayout>

@@ -6,7 +6,7 @@
     <!--第一行-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="0.3"
         android:gravity="center_vertical">
 
@@ -36,7 +36,7 @@
                 android:id="@+id/dfa_four_ctime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11-25"/>
+               />
         </LinearLayout>
 
         <ImageView
@@ -68,7 +68,7 @@
     <!--第三行-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="2"
         android:orientation="horizontal">
 
@@ -81,7 +81,7 @@
             <ImageView
                 android:id="@+id/dfa_four_pic_large_one"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/zero"
                 android:scaleType="fitXY"
                 android:layout_margin="@dimen/five"
                 android:layout_weight="1"
@@ -90,7 +90,7 @@
             <ImageView
                 android:id="@+id/dfa_four_pic_large_two"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/zero"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 android:layout_margin="@dimen/five"
@@ -98,7 +98,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -106,7 +106,7 @@
             <ImageView
                 android:id="@+id/dfa_four_pic_large_three"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/zero"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 android:layout_margin="@dimen/five"
@@ -115,7 +115,7 @@
             <ImageView
                 android:id="@+id/dfa_four_pic_large_four"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/zero"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 android:layout_margin="@dimen/five"
@@ -125,10 +125,10 @@
     <!--第四行-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:layout_weight="0.4"
-        android:layout_marginTop="3dp"
-        android:layout_margin="3dp"
+        android:layout_marginTop="@dimen/three"
+        android:layout_margin="@dimen/three"
         >
 
         <LinearLayout
@@ -137,7 +137,7 @@
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
                 >
@@ -157,7 +157,7 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
                 android:gravity="center_vertical"
@@ -167,14 +167,13 @@
                     android:id="@+id/dfa_four_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="水星记"
                     android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/dfa_four_artist_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="郭顶"/>
+                   />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -10,7 +10,7 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 
 /**
- * Created by dllo on 16/11/29.
+ *
  */
 
 public class NetHelper {
@@ -96,7 +96,7 @@ public class NetHelper {
     }
     /******************对外提供的方法************************************/
 
-    public static  void MySRequest(String url,NetListener<String> listener){
+    public static  void MyRequest(String url,NetListener<String> listener){
         getInstance().baseStringRequest(url,listener);
     }
     public static <T> void MyRequest(String url,Class<T> mClass,NetListener<T> listener){

@@ -603,7 +603,7 @@ public class DynamicFragmentAdapter extends RecyclerView.Adapter {
              */
             case TYPE_EIGHT:
                 EightViewHolder eight = (EightViewHolder) holder;
-                if (mDynamicFragmentBean.getMsg().get(position).getContent().getArtist_name()!=null) {
+                if (mDynamicFragmentBean.getMsg().get(position).getContent().getArtist_name()!=null ) {
                     String artistName = mDynamicFragmentBean.getMsg().get(position).getContent().getArtist_name();
                     if (artistName != null && !artistName.isEmpty()) {
                         eight.mTextViewArtistName.setText(artistName);
@@ -654,12 +654,13 @@ public class DynamicFragmentAdapter extends RecyclerView.Adapter {
                     eight.mTextViewTitle.setText(titleEight);
                 }
                 break;
+
         }
     }
 
     @Override
     public int getItemCount() {
-        return 25;
+        return 20;
     }
 
     /**

@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aqiang.dllo.mybaidumusic.R;
+import com.aqiang.dllo.mybaidumusic.tool.RVListener.OnItemClickListener;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -22,9 +23,13 @@ import com.squareup.picasso.Picasso;
 public class HotAdapter extends RecyclerView.Adapter<HotAdapter.HotViewHolder> {
     private HotBean mHotBean;
     private Context context;
-
+    private OnItemClickListener mOnItemClickListener;
     public HotAdapter(Context context) {
         this.context = context;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
     }
 
     public void setHotBean(HotBean hotBean) {
@@ -40,14 +45,22 @@ public class HotAdapter extends RecyclerView.Adapter<HotAdapter.HotViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(HotAdapter.HotViewHolder holder, int position) {
+    public void onBindViewHolder(final HotAdapter.HotViewHolder holder, final int position) {
         holder.titleTv.setText(mHotBean.getDiyInfo().get(position).getTitle());
         holder.userNameTv.setText(mHotBean.getDiyInfo().get(position).getUsername());
-//        if (!(mHotBean.getDiyInfo().get(position).getListen_num() + "").isEmpty()){
-//        holder.numTv.setText(mHotBean.getDiyInfo().get(position).getListen_num());
-//        }
+        holder.mTextViewListId.setText(mHotBean.getDiyInfo().get(position).getList_id());
         Log.d("uuu", "mHotBean.getDiyInfo().get(position).getListen_num():" + mHotBean.getDiyInfo().get(position).getListen_num());
         Picasso.with(context).load(mHotBean.getDiyInfo().get(position).getList_pic()).into(holder.listPicIv);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnItemClickListener != null){
+                    int p = holder.getLayoutPosition();
+                    String songId = mHotBean.getDiyInfo().get(position).getList_id();
+                    mOnItemClickListener.onItemClickListener(p,songId);
+                }
+            }
+        });
     }
 
     @Override
@@ -60,12 +73,14 @@ public class HotAdapter extends RecyclerView.Adapter<HotAdapter.HotViewHolder> {
         TextView numTv;
         TextView userNameTv;
         TextView titleTv;
+        TextView mTextViewListId;
         public HotViewHolder(View itemView) {
             super(itemView);
             listPicIv = (ImageView)itemView.findViewById(R.id.songfragmentmenu_rv_item_list_pic);
             numTv = (TextView)itemView.findViewById(R.id.songfragmentmenu_rv_item_listen_num_tv);
             userNameTv = (TextView)itemView.findViewById(R.id.songfragmentmenu_rv_item_username);
             titleTv = (TextView)itemView.findViewById(R.id.songfragmentmenu_rv_item_title);
+            mTextViewListId = (TextView)itemView.findViewById(R.id.songfragmentmenu_rv_item_songId);
         }
     }
 }

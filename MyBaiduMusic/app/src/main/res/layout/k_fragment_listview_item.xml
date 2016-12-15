@@ -5,7 +5,7 @@
               android:layout_height="50dp"
               >
    <LinearLayout
-       android:layout_width="0dp"
+       android:layout_width="@dimen/zero"
        android:layout_height="match_parent"
        android:layout_weight="2.5"
        android:orientation="vertical"
@@ -20,25 +20,25 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textStyle="bold"
-              android:text="泡沫"
+
               />
           <TextView
               android:id="@+id/k_fragment_listview_item_artist_name"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textStyle="bold"
-              android:text="邓紫棋"/>
+              />
       </LinearLayout>
        <TextView
            android:id="@+id/k_fragment_listview_item_play_num"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="45646541"
+
 
            android:textSize="@dimen/sizeten"/>
    </LinearLayout>
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_weight="1"
         android:layout_height="match_parent"
         android:gravity="center"

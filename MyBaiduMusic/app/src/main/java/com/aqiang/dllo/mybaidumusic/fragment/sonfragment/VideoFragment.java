@@ -23,6 +23,8 @@ import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.videoFragmentDetailAdapte
 
 import com.aqiang.dllo.mybaidumusic.tool.urlTools.Tools;
 
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetHelper;
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetListener;
 import com.google.gson.Gson;
 
 /**
@@ -144,23 +146,44 @@ public class VideoFragment extends SonBaseFragment implements View.OnClickListen
     }
 
     private void parseMethod(String path) {
-        RequestQueue requestQueue = Volley.newRequestQueue(context);
-        StringRequest stringRequest = new StringRequest(path, new Response.Listener<String>() {
+        /**
+         * 老方法
+         */
+//        RequestQueue requestQueue = Volley.newRequestQueue(context);
+//        StringRequest stringRequest = new StringRequest(path, new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String response) {
+//                Gson gson = new Gson();
+//                mVideoBean = gson.fromJson(response,VideoBean.class);
+//                mVideoDetailAdapter.setVideoBean(mVideoBean);
+//                mRecyclerView.setAdapter(mVideoDetailAdapter);
+//                StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+//                mRecyclerView.setLayoutManager(manager);
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//
+//            }
+//        });
+//        requestQueue.add(stringRequest);
+        /**
+         * volley二次封装
+         */
+        NetHelper.MyRequest(path, VideoBean.class, new NetListener<VideoBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                mVideoBean = gson.fromJson(response,VideoBean.class);
+            public void successListener(VideoBean response) {
+                mVideoBean = response;
                 mVideoDetailAdapter.setVideoBean(mVideoBean);
                 mRecyclerView.setAdapter(mVideoDetailAdapter);
                 StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
                 mRecyclerView.setLayoutManager(manager);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
         });
-        requestQueue.add(stringRequest);
     }
 }

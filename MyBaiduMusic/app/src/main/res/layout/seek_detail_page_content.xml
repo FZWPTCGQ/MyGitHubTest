@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -7,4 +7,102 @@
               android:layout_marginRight="@dimen/fu_sixty_five"
               android:background="#ffffff">
   <!--通过主页的搜索按钮跳转的详情页-->
-</LinearLayout>
+  <FrameLayout
+      android:id="@+id/seek_fl"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/thirty"
+      android:background="#2ab1ff"/>
+  <LinearLayout
+      android:layout_below="@+id/seek_fl"
+      android:id="@+id/seek_ll"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/fifty"
+      android:background="#2ab1ff"
+      android:orientation="horizontal"
+      >
+    <RelativeLayout
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+      <ImageView
+          android:layout_centerInParent="true"
+          android:layout_width="@dimen/twenty"
+          android:layout_height="@dimen/twenty"
+          android:src="@mipmap/bt_return_nor"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="@dimen/zero"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_centerInParent="true"
+             android:background="@drawable/shape_seek">
+           <EditText
+               android:id="@+id/seek_detail_item_et"
+               android:layout_marginLeft="@dimen/fifteen"
+               android:clickable="true"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@null"
+               android:textSize="@dimen/fifteen"
+               android:hint="@string/type"
+               />
+         </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+      <ImageView
+          android:id="@+id/seek_detail_item_iv"
+          android:layout_centerInParent="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@mipmap/bt_titlebar_search_normal"/>
+    </RelativeLayout>
+
+  </LinearLayout>
+
+  <TextView
+      android:layout_below="@id/seek_ll"
+      android:id="@+id/seek_detail_page_content_hot_seek_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="热门搜索"
+      android:textSize="@dimen/fifteen"
+      android:layout_marginLeft="@dimen/five"
+      android:layout_marginTop="@dimen/ten"
+      android:layout_marginBottom="@dimen/ten"
+      />
+  <ListView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/seek_detail_item_lv"
+      android:layout_below="@id/seek_ll"
+      android:visibility="gone"/>
+
+ <!--<android.support.v7.widget.RecyclerView-->
+     <!--android:id="@+id/seek_detail_page_content_rv"-->
+     <!--android:layout_width="match_parent"-->
+     <!--android:layout_height="0dp"-->
+     <!--android:layout_weight="1"/>-->
+  <!--<ListView-->
+      <!--android:id="@+id/seek_detail_page_content_lv"-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--/>-->
+  <!--<Button-->
+      <!--android:layout_width="match_parent"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:text=""/>-->
+
+
+
+
+</RelativeLayout>

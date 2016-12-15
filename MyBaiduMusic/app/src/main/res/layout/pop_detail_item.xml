@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/pop_detail_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/eighty"
+        android:background="#5F5F5F"
+        android:alpha="0.5"
+        android:orientation="vertical"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:background="#fff"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sixty"
+                android:background="#F2F4F5"
+                >
+                <!--播放顺序图片-->
+                <!--<ImageView-->
+
+                    <!--android:id="@+id/main_fragment_shunxu_play_iv"-->
+                    <!--android:layout_width="@dimen/fifty"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/bt_playpage_loop_normal_new"-->
+                    <!--/>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/main_fragment_suiji_play_iv"-->
+                    <!--android:layout_width="@dimen/fifty"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/bt_playpage_random_normal_new"-->
+                    <!--android:visibility="gone"/>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/main_fragment_shunxu_one_play_iv"-->
+                    <!--android:layout_width="@dimen/fifty"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/bt_playpage_order_normal_new"-->
+                    <!--android:visibility="gone"/>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/main_fragment_danqu_play_iv"-->
+                    <!--android:layout_width="@dimen/fifty"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/bt_playpage_roundsingle_normal_new"-->
+                    <!--android:visibility="gone"/>-->
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:textColor="#333333"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/pop_detail_item_clear_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clearAll"
+                    android:textSize="@dimen/sizethirteen"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/ten"
+                    />
+            </RelativeLayout>
+            <ListView
+                android:id="@+id/pop_detail_item_lv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/pop_detail_item_btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seventy"
+        android:text="@string/close"
+        android:background="#F2F4F5"
+        />
+</LinearLayout>

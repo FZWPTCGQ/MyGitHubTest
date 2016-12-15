@@ -1,6 +1,7 @@
 package com.aqiang.dllo.mybaidumusic.fragment.sonfragment;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -20,7 +22,11 @@ import com.android.volley.toolbox.Volley;
 import com.aqiang.dllo.mybaidumusic.R;
 import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.songMenuDetail.HotAdapter;
 import com.aqiang.dllo.mybaidumusic.adapter.sonadapter.songMenuDetail.HotBean;
+import com.aqiang.dllo.mybaidumusic.bean.grandSonDetailBean.SongMenuDetailBean;
+import com.aqiang.dllo.mybaidumusic.tool.RVListener.OnItemClickListener;
 import com.aqiang.dllo.mybaidumusic.tool.urlTools.Tools;
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetHelper;
+import com.aqiang.dllo.mybaidumusic.tool.volleyTools.NetListener;
 import com.google.gson.Gson;
 
 /**
@@ -46,7 +52,7 @@ public class SongMenuFragment extends SonBaseFragment implements View.OnClickLis
     int setLayout() {
         return R.layout.fragment_song_menu;
     }
-
+//   StaggeredGridLayoutManager mStaggeredGridLayoutManager = new StaggeredGridLayoutManager()
     @Override
     void initView(View view) {
         mImageView = (ImageView) view.findViewById(R.id.songfragmentmenu_detail_quanbu_iv);
@@ -56,7 +62,7 @@ public class SongMenuFragment extends SonBaseFragment implements View.OnClickLis
         mLinearLayout = (LinearLayout)view.findViewById(R.id.fragment_song_menu_ll);
         mHotAdapter = new HotAdapter(getContext());
         mTextViewLast.setTextColor(Color.BLACK);
-        mTextViewHot.setTextColor(Color.BLUE);
+        mTextViewHot.setTextColor(getResources().getColor(R.color.blue));
 
     }
 
@@ -64,7 +70,6 @@ public class SongMenuFragment extends SonBaseFragment implements View.OnClickLis
     void initData() {
         parseMethod(Tools.songMenuHot);
         animX();
-//        replaceMethod(new HotFragment());
         mImageView.setOnClickListener(this);
         mTextViewLast.setOnClickListener(this);
         mTextViewHot.setOnClickListener(this);
@@ -76,8 +81,7 @@ public class SongMenuFragment extends SonBaseFragment implements View.OnClickLis
             case R.id.songfragmentmenu_detail_quanbu_iv:
                 break;
             case R.id.songfragmentmenu_zuixin_tv:
-//                replaceMethod(new LastFragment());
-                mTextViewLast.setTextColor(Color.BLUE);
+                mTextViewLast.setTextColor(getResources().getColor(R.color.blue));
                 mTextViewHot.setTextColor(Color.BLACK);
                 parseMethod(Tools.songMenuNew);
                 animX();
@@ -85,7 +89,7 @@ public class SongMenuFragment extends SonBaseFragment implements View.OnClickLis
             case R.id.songfragmentmenu_zuire_tv:
 //                replaceMethod(new HotFragment());
                 mTextViewLast.setTextColor(Color.BLACK);
-                mTextViewHot.setTextColor(Color.BLUE);
+                mTextViewHot.setTextColor(getResources().getColor(R.color.blue));
                  parseMethod(Tools.songMenuHot);
                 animX();
                 break;
@@ -93,25 +97,38 @@ public class SongMenuFragment extends SonBaseFragment implements View.OnClickLis
     }
 
     private void parseMethod(String path) {
-        RequestQueue requestQueue = Volley.newRequestQueue(context);
-        StringRequest stringRequest = new StringRequest(path, new Response.Listener<String>() {
+        /**
+         * volley的二次封装
+         */
+        NetHelper.MyRequest(path, HotBean.class, new NetListener<HotBean>() {
             @Override
-            public void onResponse(String response) {
-                Gson gson = new Gson();
-                mHotBean = gson.fromJson(response,HotBean.class);
+            public void successListener(HotBean response) {
+                mHotBean = response;
                 mHotAdapter.setHotBean(mHotBean);
                 mRecyclerView.setAdapter(mHotAdapter);
                 StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
                 mRecyclerView.setLayoutManager(manager);
+                mHotAdapter.setOnItemClickListener(new OnItemClickListener() {
+                    @Override
+                    public void onItemClickListener(int position, String songIdList) {
+                        Toast.makeText(context, "点击了", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Tools.ACTION_REPLACE);
+                        intent.putExtra("type",1);
+                        intent.putExtra("songIdList",songIdList);
+                        context.sendBroadcast(intent);
+                    }
+                    @Override
+                    public void method(int position, SongMenuDetailBean songMenuDetailBean) {
+
+                    }
+                });
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void errorListener(VolleyError error) {
 
             }
         });
-        requestQueue.add(stringRequest);
-
     }
 
     private void animX() {
@@ -149,10 +166,5 @@ public class SongMenuFragment extends SonBaseFragment implements View.OnClickLis
         });
     }
 
-//    private void replaceMethod(Fragment fragment) {
-//        FragmentManager manager = getChildFragmentManager();
-//        FragmentTransaction fragmentTransaction = manager.beginTransaction();
-//        fragmentTransaction.replace(R.id.songfragmentmenu_fl,fragment);
-//        fragmentTransaction.commit();
-//    }
+
 }

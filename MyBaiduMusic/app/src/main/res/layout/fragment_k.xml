@@ -19,7 +19,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:hint="请输入K歌伴奏"
+            android:hint="@string/banzou"
             android:textSize="@dimen/ten"
             android:background="@null"
             android:gravity="center_vertical"/>
@@ -29,8 +29,8 @@
         android:id="@+id/k_fragment_header_view_lv"
         android:divider="#e4e2e2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:dividerHeight="3dp"
+        android:layout_height="@dimen/zero"
+        android:dividerHeight="@dimen/three"
         android:layout_weight="1"
         />
 

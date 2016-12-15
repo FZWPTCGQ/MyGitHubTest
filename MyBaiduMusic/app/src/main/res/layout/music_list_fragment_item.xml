@@ -5,6 +5,145 @@
               android:gravity="center_vertical"
               android:orientation="horizontal">
 
+    <!--<FrameLayout-->
+        <!--android:layout_width="@dimen/zero"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="@dimen/seventy"-->
+        <!--android:layout_weight="0.7">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/music_list_fragment_internet_iv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:foregroundGravity="bottom|right"-->
+            <!--android:scaleType="fitXY"-->
+
+            <!--/>-->
+    <!--</FrameLayout>-->
+    <!--&lt;!&ndash;榜单前三名&ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="@dimen/zero"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/seventy"-->
+        <!--android:layout_weight="2"-->
+        <!--android:orientation="vertical">-->
+         <!--&lt;!&ndash;标题&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/music_list_fragment_name_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:textColor="#131313"/>-->
+        <!--&lt;!&ndash;第一名&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/margintwo"-->
+                <!--android:text="@string/one"-->
+                <!--android:textColor="#e91010"-->
+                <!--android:textSize="@dimen/sizeten"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/music_list_fragment_first_title_tv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/margintwo"-->
+                <!--android:text="@string/first"-->
+                <!--android:textSize="@dimen/sizeten"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/music_list_fragment_first_author_tv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/margintwo"-->
+
+                <!--android:textSize="@dimen/sizeten"/>-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/music_list_fragment_first_author_tv"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:singleLine="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="哈哈"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:ellipsize="marquee"/>&ndash;&gt;-->
+        <!--</LinearLayout>-->
+        <!--&lt;!&ndash;第二名&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/margintwo"-->
+                <!--android:text="@string/two"-->
+                <!--android:textColor="#f2651e"-->
+                <!--android:textSize="@dimen/sizeten"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/music_list_fragment_two_title_tv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/margintwo"-->
+                <!--android:text="@string/second"-->
+                <!--android:textSize="@dimen/ten"/>-->
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/music_list_fragment_two_author_tv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/margintwo"-->
+
+                <!--android:textSize="@dimen/sizeten"/>-->
+        <!--</LinearLayout>-->
+        <!--&lt;!&ndash;第三名&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/two"-->
+                <!--android:text="@string/three"-->
+                <!--android:textColor="#a77a07"-->
+                <!--android:textSize="@dimen/sizeten"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/music_list_fragment_three_title_tv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/two"-->
+                <!--android:text="@string/third"-->
+                <!--android:textSize="@dimen/sizeten"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/music_list_fragment_three_author_tv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="@dimen/two"-->
+
+                <!--android:textSize="@dimen/sizeten"/>-->
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+    <!--&lt;!&ndash;更多&ndash;&gt;-->
+    <!--<ImageView-->
+        <!--android:id="@+id/music_list_fragment_next_iv"-->
+        <!--android:layout_width="@dimen/zero"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/marginfive"-->
+        <!--android:layout_weight="0.2"-->
+        <!--/>-->
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -27,7 +166,7 @@
         android:layout_margin="7dp"
         android:layout_weight="2"
         android:orientation="vertical">
-         <!--标题-->
+        <!--标题-->
         <TextView
             android:id="@+id/music_list_fragment_name_tv"
             android:layout_width="wrap_content"

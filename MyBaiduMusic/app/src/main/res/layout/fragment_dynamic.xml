@@ -7,8 +7,13 @@
 
       <android.support.v7.widget.RecyclerView
           android:layout_width="match_parent"
-          android:layout_height="match_parent"
+          android:layout_height="@dimen/zero"
+          android:layout_weight="1"
           android:id="@+id/dynamic_fragment_rv"
           android:layout_marginLeft="@dimen/ten"
           android:layout_marginRight="@dimen/ten"/>
+     <FrameLayout
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/forty"
+         />
 </LinearLayout>

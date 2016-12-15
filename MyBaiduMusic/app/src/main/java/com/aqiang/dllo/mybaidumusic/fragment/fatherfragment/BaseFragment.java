@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  * Created by dllo on 16/11/22.
  */
 public abstract class BaseFragment extends Fragment {
-    private Context context;
+    public Context context;
 
     @Override
     public void onAttach(Context context) {
@@ -37,9 +37,9 @@ public abstract class BaseFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         initData();
     }
-    abstract int setLayout();
-    abstract void initView(View view);
-    abstract void initData();
+    protected abstract int setLayout();
+    protected abstract void initView(View view);
+    protected abstract void initData();
     public <T extends View> T bindView(int id){
         return null;
     }

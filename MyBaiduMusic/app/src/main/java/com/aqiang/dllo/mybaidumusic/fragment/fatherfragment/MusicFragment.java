@@ -1,6 +1,7 @@
 package com.aqiang.dllo.mybaidumusic.fragment.fatherfragment;
 
 
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -30,12 +31,12 @@ public class MusicFragment extends BaseFragment {
     private List<Fragment> fragments;
     private MusicFragmentAdapter musicFragmentAdapter;
     @Override
-    int setLayout() {
+    protected int setLayout() {
         return R.layout.fragment_music;
     }
 
     @Override
-    void initView(View view) {
+    protected void initView(View view) {
         /**
          * 初始化数据
          */
@@ -51,7 +52,7 @@ public class MusicFragment extends BaseFragment {
     }
 
     @Override
-    void initData() {
+    protected void initData() {
         /**
          * 添加子fragment
          */
@@ -66,6 +67,8 @@ public class MusicFragment extends BaseFragment {
         fragments.add(new KFragment());
         viewPager.setAdapter(musicFragmentAdapter);
         tab.setupWithViewPager(viewPager);
+        tab.setSelectedTabIndicatorColor(0xff00b4ff);
+        tab.setTabTextColors(Color.rgb(0x00,0x00,0x00), Color.rgb(0x49,0xB3,0xE8));
     }
 
 

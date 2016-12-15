@@ -7,6 +7,12 @@
 
   <ListView
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="@dimen/zero"
+      android:layout_weight="1"
       android:id="@+id/musicListFragment_lv"/>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/fifty"
+      android:background="#fff"/>
 </LinearLayout>

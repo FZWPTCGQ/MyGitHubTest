@@ -4,11 +4,22 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               tools:context="com.aqiang.dllo.mybaidumusic.fragment.fatherfragment.LiveFragment">
-
-
-    <android.support.v7.widget.RecyclerView
+<FrameLayout
+    android:id="@+id/fragment_live_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:layout_weight="1"
         android:id="@+id/fragmetn_live_rv"/>
-
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"/>
+    </LinearLayout>
+</FrameLayout>
 </LinearLayout>
